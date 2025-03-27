@@ -10,3 +10,50 @@ div{
     background-color: deeppink;
     margin: 0 auto;
 }
+
+.divSticky{
+    background-color: violet;
+    position: sticky;
+    top: 100px;
+    left: 400px;
+
+}
+
+.divRelative{
+    background-color: wheat;
+    position: relative;
+    top: 50px;
+    left: 800px;
+
+}
+
+.divFixed{
+    background-color: teal;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+}
+
+.divStatic{
+    background-color: thistle;
+    position: static;
+    top: 100px;
+    left: 300px;
+}
+
+.divAbsolute{
+    background-color: aquamarine;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+}
+
+.divAlignLeft{
+    background-color: yellow;
+    float: left;
+}
+
+.divAlignRight{
+    background-color: yellowgreen;
+    float: right;
+}
