@@ -1,0 +1,12 @@
+div{
+    width: 400px;
+    height: 300px;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.divAlignCenter{
+    background-color: deeppink;
+    margin: 0 auto;
+}
