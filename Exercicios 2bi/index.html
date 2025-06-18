@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios (1,2,3) de Programação J.S </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exercícios (1,2,3) de Programação J.S</h1>
+        <h1>Atividade 1</h1>
+        
+        <div class="nav">
+            <a href="#ex1-1">Exercício 1</a>
+            <a href="#ex1-2">Exercício 2</a>
+            <a href="#ex1-3">Exercício 3</a>
+            <a href="#ex1-4">Exercício 4</a>
+            <a href="#ex1-5">Exercício 5</a>
+            <a href="#ex1-6">Exercício 6</a>
+            <a href="#ex1-7">Exercício 7</a>
+        </div>
+
+        <!-- Exercício 1 - Cálculo de Troco -->
+        <div id="ex1-1" class="exercicio">
+            <h2>1. Cálculo de Troco</h2>
+            <label for="valorPago">Valor Pago:</label>
+            <input type="number" id="valorPago" step="0.01" placeholder="R$">
+            
+            <label for="precoProduto">Preço do Produto:</label>
+            <input type="number" id="precoProduto" step="0.01" placeholder="R$">
+            
+            <button onclick="calcularTroco()">Calcular Troco</button>
+            
+            <div id="resultado1" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 2 - Cálculo de Valor por Peso -->
+        <div id="ex1-2" class="exercicio">
+            <h2>2. Cálculo por Peso</h2>
+            <label for="precoQuilo">Preço por Quilo (R$):</label>
+            <input type="number" id="precoQuilo" step="0.01" placeholder="Ex: 25.99">
+            
+            <label for="quantidade">Quantidade (kg):</label>
+            <input type="number" id="quantidade" step="0.01" placeholder="Ex: 1.5">
+            
+            <button onclick="calcularValorPorPeso()">Calcular Valor</button>
+            
+            <div id="resultado2" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 3 - Reajuste de Saldo -->
+        <div id="ex1-3" class="exercicio">
+            <h2>3. Reajuste de Saldo</h2>
+            <label for="saldo">Saldo Atual:</label>
+            <input type="number" id="saldo" step="0.01" placeholder="R$">
+            
+            <button onclick="calcularReajuste()">Calcular Reajuste</button>
+            
+            <div id="resultado3" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 4 - Cálculos com 3 Números -->
+        <div id="ex1-4" class="exercicio">
+            <h2>4. Cálculos com 3 Números</h2>
+            <div class="input-group">
+                <label for="numero1">Número 1:</label>
+                <input type="number" id="numero1" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="numero2">Número 2:</label>
+                <input type="number" id="numero2" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="numero3">Número 3:</label>
+                <input type="number" id="numero3" placeholder="Digite um número">
+            </div>
+            
+            <button onclick="calcularMedias()">Calcular</button>
+            
+            <div id="resultado4" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 5 - Maior entre 2 Valores -->
+        <div id="ex1-5" class="exercicio">
+            <h2>5. Maior entre 2 Valores</h2>
+            <div class="input-group">
+                <label for="valor1">Valor 1:</label>
+                <input type="number" id="valor1" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="valor2">Valor 2:</label>
+                <input type="number" id="valor2" placeholder="Digite um número">
+            </div>
+            
+            <button onclick="compararValores()">Comparar</button>
+            
+            <div id="resultado5" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 6 - Menor entre 4 Valores -->
+        <div id="ex1-6" class="exercicio">
+            <h2>6. Menor entre 4 Valores</h2>
+            <div class="input-group">
+                <label for="valor1-6">Valor 1:</label>
+                <input type="number" id="valor1-6" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="valor2-6">Valor 2:</label>
+                <input type="number" id="valor2-6" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="valor3-6">Valor 3:</label>
+                <input type="number" id="valor3-6" placeholder="Digite um número">
+            </div>
+            <div class="input-group">
+                <label for="valor4-6">Valor 4:</label>
+                <input type="number" id="valor4-6" placeholder="Digite um número">
+            </div>
+            
+            <button onclick="encontrarMenor()">Comparar</button>
+            
+            <div id="resultado6" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 7 - Verificar Número Ímpar -->
+        <div id="ex1-7" class="exercicio">
+            <h2>7. Verificar Número Ímpar</h2>
+            <label for="numero">Digite um número:</label>
+            <input type="number" id="numero" placeholder="Digite um número inteiro">
+            
+            <button onclick="verificarImpar()">Verificar</button>
+            
+            <div id="resultado7" class="resultado"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Atividade 2</h1>
+        <div class="nav">
+            <a href="#ex2-1">Exercício 1</a>
+            <a href="#ex2-2">Exercício 2</a>
+            <a href="#ex2-3">Exercício 3</a>
+            <a href="#ex2-4">Exercício 4</a>
+        </div>
+        <!-- Exercício 1 Atividade 2 -->
+        <div id="ex2-1" class="exercicio2">
+            <h2>1. Cálculo de Variação do Dólar</h2>
+            <label for="cotacao">Cotação atual do dólar:</label>
+            <input type="number" id="cotacao" step="0.01" placeholder="R$">
+            
+            <button onclick="calcularVariacoes()">Calcular Variações</button>
+            
+            <div id="resultado2-1" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 2: Cálculo para Omelete -->
+        <div id="ex2-2" class="exercicio2">
+            <h2>2. Cálculo para Omelete</h2>
+            <label for="pessoas">Quantidade de pessoas:</label>
+            <input type="number" id="pessoas" placeholder="Número de pessoas">
+            
+            <button onclick="calcularIngredientes()">Calcular Ingredientes</button>
+            
+            <div id="resultado2-2" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 3: Operações Matemáticas -->
+        <div id="ex2-3" class="exercicio2">
+            <h2>3. Operações Matemáticas</h2>
+            <label for="numero1-2">Primeiro número:</label>
+            <input type="number" id="numero1-2" placeholder="Digite um número">
+            
+            <label for="numero2-2">Segundo número:</label>
+            <input type="number" id="numero2-2" placeholder="Digite um número">
+            
+            <button onclick="calcularOperacoes()">Calcular Operações</button>
+            
+            <div id="resultado2-3" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 4: Pedido de Pizza -->
+        <div id="ex2-4" class="exercicio2">
+            <h2>4. Pedido de Pizza</h2>
+            <label for="sabor1">Sabor 1:</label>
+            <input type="text" id="sabor1" placeholder="Primeiro sabor">
+            
+            <label for="sabor2">Sabor 2:</label>
+            <input type="text" id="sabor2" placeholder="Segundo sabor">
+            
+            <label for="sabor3">Sabor 3:</label>
+            <input type="text" id="sabor3" placeholder="Terceiro sabor">
+            
+            <label for="sabor4">Sabor 4:</label>
+            <input type="text" id="sabor4" placeholder="Quarto sabor">
+            
+            <label for="refrigerantes">Quantidade de refrigerantes:</label>
+            <input type="number" id="refrigerantes" placeholder="0" min="0">
+            
+            <button onclick="calcularPedido()">Calcular Total</button>
+            
+            <div id="resultado2-4" class="resultado"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Atividade 3</h1>
+        <div class="nav">
+            <a href="#ex3-1">1. Área Terreno</a>
+            <a href="#ex3-2">2. Ferraduras</a>
+            <a href="#ex3-3">3. Padaria</a>
+            <a href="#ex3-4">4. Dias de Vida</a>
+            <a href="#ex3-5">5. Combustível</a>
+            <a href="#ex3-6">6. Restaurante</a>
+            <a href="#ex3-7">7. Dias do Ano</a>
+            <a href="#ex3-8">8. Camisetas</a>
+            <a href="#ex3-9">9. Distância</a>
+            <a href="#ex3-10">10. Tempo Trabalho</a>
+            <a href="#ex3-11">11. Salário</a>
+            <a href="#ex3-12">12. Decomposição</a>
+            <a href="#ex3-13">13. Área Pizza</a>
+            <a href="#ex3-14">14. Divisão Conta</a>
+        </div>
+
+        <!-- Exercício 1 -->
+        <div id="ex3-1" class="exercicio3">
+            <h2>1. Área de Terreno Retangular</h2>
+            <label for="largura">Largura (m):</label>
+            <input type="number" id="largura" step="0.01" placeholder="Metros">
+            
+            <label for="comprimento">Comprimento (m):</label>
+            <input type="number" id="comprimento" step="0.01" placeholder="Metros">
+            
+            <button onclick="calcularAreaTerreno()">Calcular Área</button>
+            
+            <div id="resultado3-1" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 2 -->
+        <div id="ex3-2" class="exercicio3">
+            <h2>2. Cálculo de Ferraduras</h2>
+            <label for="cavalos">Quantidade de cavalos:</label>
+            <input type="number" id="cavalos" placeholder="Número de cavalos">
+            
+            <button onclick="calcularFerraduras()">Calcular</button>
+            
+            <div id="resultado3-2" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 3 -->
+        <div id="ex3-3" class="exercicio3">
+            <h2>3. Cálculo da Padaria</h2>
+            <label for="paes">Quantidade de pães:</label>
+            <input type="number" id="paes" placeholder="Número de pães">
+            
+            <label for="broas">Quantidade de broas:</label>
+            <input type="number" id="broas" placeholder="Número de broas">
+            
+            <button onclick="calcularPadaria()">Calcular</button>
+            
+            <div id="resultado3-3" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 4 -->
+        <div id="ex3-4" class="exercicio3">
+            <h2>4. Dias de Vida</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+            
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" placeholder="Sua idade">
+            
+            <button onclick="calcularDiasVida()">Calcular</button>
+            
+            <div id="resultado3-4" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 5 -->
+        <div id="ex3-5" class="exercicio3">
+            <h2>5. Cálculo de Combustível</h2>
+            <label for="precoGasolina">Preço do litro (R$):</label>
+            <input type="number" id="precoGasolina" step="0.01" placeholder="R$">
+            
+            <label for="valorPagamento">Valor do pagamento (R$):</label>
+            <input type="number" id="valorPagamento" step="0.01" placeholder="R$">
+            
+            <button onclick="calcularCombustivel()">Calcular Litros</button>
+            
+            <div id="resultado3-5" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 6 -->
+        <div id="ex3-6" class="exercicio3">
+            <h2>6. Restaurante a Quilo</h2>
+            <label for="pesoPrato">Peso do prato (kg):</label>
+            <input type="number" id="pesoPrato" step="0.01" placeholder="Quilos">
+            
+            <button onclick="calcularRefeicao()">Calcular Valor</button>
+            
+            <div id="resultado3-6" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 7 -->
+        <div id="ex3-7" class="exercicio3">
+            <h2>7. Dias desde início do ano</h2>
+            <label for="dia">Dia:</label>
+            <input type="number" id="dia" min="1" max="31" placeholder="Dia">
+            
+            <label for="mes">Mês:</label>
+            <input type="number" id="mes" min="1" max="12" placeholder="Mês">
+            
+            <button onclick="calcularDiasAno()">Calcular</button>
+            
+            <div id="resultado3-7" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 8 -->
+        <div id="ex3-8" class="exercicio3">
+            <h2>8. Venda de Camisetas</h2>
+            <label for="pequenas">Camisetas pequenas:</label>
+            <input type="number" id="pequenas" placeholder="Quantidade">
+            
+            <label for="medias">Camisetas médias:</label>
+            <input type="number" id="medias" placeholder="Quantidade">
+            
+            <label for="grandes">Camisetas grandes:</label>
+            <input type="number" id="grandes" placeholder="Quantidade">
+            
+            <button onclick="calcularCamisetas()">Calcular Total</button>
+            
+            <div id="resultado3-8" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 9 -->
+        <div id="ex3-9" class="exercicio3">
+            <h2>9. Distância entre Pontos</h2>
+            <label for="x1">Ponto A (x1):</label>
+            <input type="number" id="x1" placeholder="Coordenada x">
+            
+            <label for="y1">Ponto A (y1):</label>
+            <input type="number" id="y1" placeholder="Coordenada y">
+            
+            <label for="x2">Ponto B (x2):</label>
+            <input type="number" id="x2" placeholder="Coordenada x">
+            
+            <label for="y2">Ponto B (y2):</label>
+            <input type="number" id="y2" placeholder="Coordenada y">
+            
+            <button onclick="calcularDistancia()">Calcular Distância</button>
+            
+            <div id="resultado3-9" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 10 -->
+        <div id="ex3-10" class="exercicio3">
+            <h2>10. Conversão de Dias</h2>
+            <label for="diasTrabalho">Dias sem acidentes:</label>
+            <input type="number" id="diasTrabalho" placeholder="Número de dias">
+            
+            <button onclick="converterDiasTrabalho()">Converter</button>
+            
+            <div id="resultado3-10" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 11 -->
+        <div id="ex3-11" class="exercicio3">
+            <h2>11. Ajuste Salarial</h2>
+            <label for="salario">Salário Atual (R$):</label>
+            <input type="number" id="salario" step="0.01" placeholder="R$">
+            
+            <button onclick="calcularAjusteSalarial()">Calcular</button>
+            
+            <div id="resultado3-11" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 12 -->
+        <div id="ex3-12" class="exercicio3">
+            <h2>12. Decomposição Numérica</h2>
+            <label for="numero3dig">Número (até 3 dígitos):</label>
+            <input type="number" id="numero3dig" min="0" max="999" placeholder="Número de 0 a 999">
+            
+            <button onclick="decomporNumero()">Decompor</button>
+            
+            <div id="resultado3-12" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 13 -->
+        <div id="ex3-13" class="exercicio3">
+            <h2>13. Área da Pizza</h2>
+            <label for="raioPizza">Raio da pizza (cm):</label>
+            <input type="number" id="raioPizza" step="0.1" placeholder="Centímetros">
+            
+            <button onclick="calcularAreaPizza()">Calcular Área</button>
+            
+            <div id="resultado3-13" class="resultado"></div>
+        </div>
+
+        <!-- Exercício 14 -->
+        <div id="ex3-14" class="exercicio3">
+            <h2>14. Divisão de Conta</h2>
+            <label for="totalConta">Valor total da conta (R$):</label>
+            <input type="number" id="totalConta" step="0.01" placeholder="R$">
+            
+            <button onclick="dividirConta()">Dividir</button>
+            
+            <div id="resultado3-14" class="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
