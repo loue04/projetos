@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+
+}
+
+header {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+
+    & nav {
+        & ul {
+            display: grid;
+            grid-template-columns: repeat(5, 200px);
+            gap: 5%;
+        }
+    }
+
+}
+
+section {
+    background-image: radial-gradient(#690000, #ffffff);
+}
